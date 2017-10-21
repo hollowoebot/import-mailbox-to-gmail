@@ -154,3 +154,11 @@ viewing the `import-mailbox-to-gmail.log` file.
 * If any of the folders have a ".mbox" extension, it will be dropped when creating the label for it in Gmail.
 * To import mail from Apple Mail.app, make sure you export it first - the raw Apple Mail files can't be imported. You can export a folder by right clicking it in Apple Mail and choosing "Export Mailbox".
 * If any of the folders have a ".mbox" extension and a file named "mbox" in them, the contents of the "mbox" file will be imported to the label named as the folder. This is how Apple Mail exports are structured.
+
+### Windows 7 Suggested Fix
+
+Create a folder C:\importer
+Put the credentials.json file in the folder C:\importer
+Put import-mailbox-to-gmail.py in the folder C:\importer
+Point the CMD line at the folder by typing cd C:\importer
+Use this command C:\Python27\python.exe import-mailbox-to-gmail.py --json c:\importer\credentials.json --dir c:\mbox
